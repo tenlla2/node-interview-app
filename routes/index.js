@@ -29,7 +29,7 @@ router.get("/dropTable", async (req, res) => {
       res.status(500).send(err);
     } else {
       console.log("Table has been droped");
-      res.status(200).send("Table has been drop");
+      res.status(200).send("Table has been dropped");
     }
   });
 });
