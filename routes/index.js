@@ -28,7 +28,7 @@ router.get("/dropTable", async (req, res) => {
       console.log(err);
       res.status(500).send(err);
     } else {
-      console.log("Table has been drop");
+      console.log("Table has been droped");
       res.status(200).send("Table has been drop");
     }
   });
