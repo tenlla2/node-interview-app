@@ -5,6 +5,14 @@ const functions = require("../functions/functions.js");
 
 // Get open restaurants with a query and return it
 router.post("/getRestaurants", async (req, res) => {
+  exist = await functions.existTable();
+  if (exist === 0) {
+    if (functions.data.length === 0) {
+      await functions.readStaticCsv();
+    }
+    dataFixed = functions.fixJsonData();
+    await functions.createTable(dataFixed);
+  }
   let day = req.body.day;
   let hour = req.body.hour;
   await query(
