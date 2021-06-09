@@ -1,5 +1,5 @@
 # node-interview-app
-node version: "15.4.0
+node version: "15.4.0"
 
 RUN SERVER: node index.js
 
