@@ -163,7 +163,7 @@ module.exports = {
   // this function check if exist table restaurants in the database
   async existTable() {
     var result = await query(
-      "SELECT count(*) FROM information_schema.TABLES WHERE (TABLE_SCHEMA = 'sql4417332') AND (TABLE_NAME = 'restaurants')"
+      "SELECT count(*) FROM information_schema.TABLES WHERE (TABLE_SCHEMA = 'sql4419364') AND (TABLE_NAME = 'restaurants')"
     );
     result = result[0]["count(*)"];
     return result;
